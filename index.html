@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <link rel="stylesheet" href="style.css">
+  
+
+
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo1.png" alt="just 쇼핑몰 로고">
+      </div>
+      <ul class="mainMenu">
+        <li>메인메뉴1
+          <ul class="subMenu">
+            <li>서브메뉴1-1</li>
+            <li>서브메뉴1-2</li>
+            <li>서브메뉴1-3</li>
+            <li>서브메뉴1-4</li>
+          </ul>
+        </li>
+        <li>메인메뉴2
+          <ul class="subMenu">
+            <li>서브메뉴2-1</li>
+            <li>서브메뉴2-2</li>
+            <li>서브메뉴2-3</li>
+            <li>서브메뉴2-4</li>
+          </ul>
+        </li>
+        <li>메인메뉴3
+          <ul class="subMenu">
+            <li>서브메뉴3-1</li>
+            <li>서브메뉴3-2</li>
+            <li>서브메뉴3-3</li>
+            <li>서브메뉴3-4</li>
+          </ul>
+        </li>
+        <li>메인메뉴4
+          <ul class="subMenu">
+            <li>서브메뉴4-1</li>
+            <li>서브메뉴4-2</li>
+            <li>서브메뉴4-3</li>
+            <li>서브메뉴4-4</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="slide">
+      <img src="images/s1.jpg" alt="슬라이드 이미지 첫번쨰">
+    </div>
+    <div class="contents">
+      <div class="box">
+        <button class="btn-notice">공지사항</button>
+        <button class="btn-gallery">갤러리</button>
+        <div class="notice">
+          <ul>
+            <li class="open-pop">2024년도 블랙프라이데이 초특가 할인행사</li>
+            <li>연말을 맞이하여 1+1 추가 할인혜택을 누려보세요~</li>
+            <li>신규고객을 위한 맞춤형 서비스 제공 중</li>
+            <li>수원점 JUST 쇼핑몰 Grand Open 할인행사</li>
+            <li>지금 당장 회원가입을 하시면 10% 할인 쿠폰 증정  </li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <ul>
+            <li><img src="images/g2.jpg" alt=""></li>
+            <li><img src="images/g3.jpg" alt=""></li>
+            <li><img src="images/g2.jpg" alt=""></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    
+
+    
+      <div class="banner">
+        <img src="images/b1.jpg" alt="">
+
+      </div>
+      <div class="baro">
+        <img src="images/g3.jpg" alt="">
+
+      </div>
+
+    </div>
+    <div class="footer">
+      <div class="logo">
+        <img src="images/logo2.png" alt="">
+      </div>
+      <div class="copy">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, quis fugiat voluptate sint molestiae nulla iste nihil eius omnis deserunt rerum cumque aliquid a perferendis optio, eum deleniti accusantium animi.
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="pop">
+    <h1>2024년도 블랙프라이데이가 온다!</h1>
+    <p>5만원 이상 구매시 30% 할인</p>
+    <p>10만원 이상 구매시 언제든 사용 가능한 10% 할인 쿠폰 증정</p>
+    <p>연말 준비 코디 추천 항목 전부 할인!</p>
+
+    <button class="close-pop">닫기</button>
+  </div>
+  
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script>
+
+    //첫번쨰 공지사항을 클릭할 시 팝업창 등장
+    $(".open-pop").click(function(){
+      $(".pop").fadeIn();
+    })
+    $(".close-pop").click(function(){
+      $(".pop").fadeOut();
+    })
+
+    $(".btn-gallery").click(function(){
+      $(".gallery").show();
+      $(".notice").hide();
+    })
+    $(".btn-notice").click(function(){
+      $(".notice").show();
+      $(".gallery").hide();
+    })
+
+    $(".mainMenu>li").mouseover(function(){
+      $(this).children(".subMenu").show();
+    })
+    $(".mainMenu>li").mouseleave(function(){
+      $(".subMenu").hide();
+    })
+  </script>
+</body>
+</html>
